@@ -28,7 +28,11 @@ SECRET_KEY = 'django-insecure-1t-^)^=#h$g5shxj2xgudirp0$%c#&nq&5uhif!4#&=89n-5ea
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'celebrated-fulfillment-production.up.railway.app',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
@@ -136,6 +140,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8080",
     "http://127.0.0.1:5500",
     "https://ecosmart-bmm.netlify.app",
+
     # Add your frontend URL
 ]
 
@@ -151,3 +156,6 @@ EMAIL_HOST_USER = 'blaziousmwambuwa@gmail.com'        # your sender email
 EMAIL_HOST_PASSWORD = 'rfvz zrbq rwav ejyc'    # use App Password, NOT Gmail password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://celebrated-fulfillment-production.up.railway.app'
+]
